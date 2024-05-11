@@ -5,6 +5,472 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./bootstrap_solution_code_style.css" />
   <title>TinDog by Code</title>
+  <style>
+    .gradient-background {
+   background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+   background-size: 180% 180%;
+   animation: gradient-animation 18s ease infinite;
+ }
+ 
+ @keyframes gradient-animation {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+
+body {
+   height: 100vh;
+   padding: 0;
+   margin: 0;
+}
+body > * {
+   width: 100%;
+}
+body * {
+   margin: 0;
+   padding: 0;
+}
+
+
+
+/* --------------------------------------------------------------Title */
+#title {
+   /* height: 700px; */
+   /* border: 5px solid rgb(17, 250, 9); */
+   box-sizing: border-box;
+   padding: 90px 24px 0px 24px;
+}
+   /* niveau 1 ---------------------------------*/
+   .title-flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      /* background-color: black; */
+      gap: 96px;
+   }
+   /* niveau 1.5 special !!!!!!!!!!!!!!!!!!!!!! */
+   .title-flex-items-box {
+      width: 100%;
+      display: flex;
+   }
+   /* fin niveau 1.5 special */
+
+      /* niveau 2 ---------------------------------*/
+      .title-flex-item {
+         box-sizing: border-box;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
+      }
+         /* niveau 3 ---------------------------------*/
+         .title-flex-item > h1 {
+            width: 450px;
+            font-size: 3rem;
+            box-sizing: content-box;
+         }
+         .title-second-flex-item > img {
+            height: 550px;
+         }
+         .title-bouton-container {
+            display: flex;
+            padding-top: 10px;
+            gap: 20px;
+         }
+         
+            /* niveau 4 ---------------------------------*/
+            .title-bouton-item {
+               border: 2px solid white;
+               height: 40px;
+               width: 180px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               gap: 10px;
+               font-size: 24px;
+               border-radius: 10px;
+            }
+               /* niveau 5 ---------------------------------*/
+               .title-bouton-item > img {
+                  height: 24px;
+               }
+            /* niveau 4 ---------------------------------*/   
+            .title-bouton1 {
+               background-color: white;
+            }
+            .title-bouton1:hover{
+               background-color: rgb(216, 213, 213);
+            }
+            .title-bouton2{
+               color: white;
+            }
+            .title-bouton2:hover {
+               color: black;
+               background-color: rgb(216, 213, 213);
+            }
+
+
+
+
+/* --------------------------------------------------------------Features */
+#features {
+   min-height: 250px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+   /* niveau 1 ---------------------------------*/
+   .features-flex-container {
+      flex: 1;
+      box-sizing: border-box;
+      height: 100%;
+      margin: 48px 48px;
+      padding: 24px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+   }
+      /* niveau 2 ------------------------------- */
+      .features-flex-item {
+         flex: 1;
+         display: flex;
+         gap: 10px;
+      }
+         /* niveau 3 --------------------------- */
+         .features-icon {
+            background-color: rgb(216, 216, 216);
+            height: 45px !important ;
+            width: 45px  !important; 
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+            /* niveau 4 -------------- */
+            .features-text > h2 {
+               font-size: 2rem;
+               margin-bottom: 5px;
+            }
+            .features-text > p {
+               font-size: 1rem;
+            }
+
+
+
+
+/* --------------------------------------------------------------Testimonial  */
+#testimonial {
+   min-height: 200px;
+   background-color: rgb(175, 175, 175);
+}
+   /* niveau 1 ------------------------------------------- */
+   .testimonial-flex-container {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 48px 48px;
+      padding: 24px 24px 0px 24px;
+   }
+      /* niveau 2 ------------------------------------------ */
+      .testimonial-item {
+         width: 100%;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+      }
+      .testimonial-first-item {
+         text-align: center;
+         font-size: 1.6rem;
+         margin-top: 60px;
+         margin-bottom: 30px;
+         font-weight: bolder;
+      }
+      .testimonial-second-item {
+         flex-direction: column;
+         align-items: center;
+      }
+      .testimonial-third-item {
+         justify-content: space-around;
+         margin-top: 30px;
+         margin-bottom: 10px;
+      }
+         /* niveau 3 --------------------------------------- */
+         .testimonial-second-item > img {
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+         }
+         .testimonial-second-item > p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+         }
+         .testimonial-third-item > div {
+            margin-bottom: 5px;
+         }
+            /* niveau 4 ------------------------------- */
+            .testimonial-third-item  img {
+               height: 30px;
+            }
+
+
+
+            
+/* -------------------------------------------------------------- Pricing */
+#pricing {
+   min-height: 200px;
+}
+   /* niveau 1 ----------------------------------------- */
+   .pricing-flex-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 48px 48px;
+      padding: 24px 24px;
+      
+   }
+      /* niveau 2 ---------------------------------------- */
+      .pricing-first-item {
+         text-align: center;
+         margin-bottom: 50px;
+      }
+      .pricing-second-item {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 20px;
+      }
+         /* niveau 3 -------------------------------------- */
+         .pricing-first-item > h2 {
+            font-size: 4rem;
+            
+         }
+         .pricing-first-item > p {
+            font-size: 1.5rem;
+         }
+         .pricing-price {
+            flex: 1;
+            border: 2px solid rgba(165, 165, 165);
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1;
+         }
+         .pricing-price-3 {
+            border-color: black;
+         }
+            /* niveau 4 -------------------------------------- */
+            .pricing-price-title {
+               width: 100%;
+               padding: 10px 0px;
+               background-color: rgb(165, 165, 165);
+               border-bottom: 2px solid rgb(167, 166, 166);
+               font-size: 2rem;
+               border-radius: 8px 8px 0 0;
+               z-index: -1;
+            }
+            .pricing-price > p {
+               font-size: 2.5rem;
+               margin: 20px 0px;
+            }
+            .pricing-price > ol {
+               list-style: none;
+            }               
+            .pricing-price > button {
+               box-sizing: border-box;
+               font-size: 1.5rem;
+               width: 90%;
+               margin: 20px 0px;
+               padding: 10px 0px;
+               border: 1px solid;
+               border-radius: 10px;
+               background-color: white;
+            }
+            .pricing-price > button:hover , .pricing-price-2 > button , .pricing-price-3 > button {
+               background-color: black;
+               color: white;
+            }
+            .pricing-price-title-3 {
+               background-color: black;
+               color: white;
+               border-color: black;
+            }
+            .pricing-price-2 > button:hover , .pricing-price-3 > button:hover {
+               background-color: rgb(0, 0, 0, 0.8);
+               color: rgb(255, 255, 255);
+            }
+               /* niveau 5 --------------------------------------  */
+               .pricing-price > p > span {
+                  font-weight: bolder;
+                  font-size: 3rem;
+               }
+               .pricing-price > ol > li {
+                  margin-bottom: 10px;
+               }
+/* -------------------------------------------------------------- Footer */
+#footer {
+   min-height: 200px;
+   padding: 48px 48px 96px 48px;
+}
+   /* niveau 1 -------------------------------------- */
+   .footer-grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 100%;
+      grid-auto-rows: 100%;
+      gap: 24px;
+   }
+      /* niveau 2 ------------------------------------ */
+
+      .footer-item {
+         background-color: rgb(89, 0, 255);
+      }
+         /* niveau 3 -------------------------------- */
+         .footer-item * {
+            width: 100%;
+         }
+         .footer-item * {
+            margin-bottom: 15px;
+         }
+         .footer-item li {
+            list-style: none;
+         }
+         .footer-item a {
+            color: black;
+            text-decoration: none;
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+   /* ---------------------------------- Title */
+   .title-flex-container {
+      flex-wrap: wrap-reverse;
+      justify-content: flex-start;
+   }
+      .title-flex-item {
+         padding-left: 48px;
+      }
+      .title-first-flex-item {
+         width: 100%;
+      }
+         .title-first-flex-item > h1 {
+            width: 100%;
+            font-size: 44px;
+         }        
+      .title-second-flex-item {
+         width: 450px;
+      }
+
+   /*  --------------------------------- Features */
+   .features-flex-container {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+   }
+   /* ---------------------------------- Testimonial */
+   .testimonial-third-item {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+   }
+   .testimonial-third-item > div {
+      margin-bottom: 30px;
+   }
+}
+
+@media (max-width: 768px) {
+   /* ---------------------------------- Title */
+   .title-flex-container {
+      padding-left: 48px;
+      padding-right: 120px;
+   }
+         .title-bouton-container {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+         }
+            .title-bouton-item {
+               width: 100%;
+            }
+   /*  --------------------------------- Features */
+   .features-flex-container {
+      padding-left: 72px ;
+   }
+   /* ---------------------------------- Testimonial */
+
+   /* ---------------------------------- Pricing */
+   .pricing-second-item {
+      flex-direction: column;
+   }
+      .pricing-price{
+         width: 100%;
+      }
+   /* ----------------- Footer */
+   .footer-grid-container {
+      width: 50%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 50px;
+      grid-auto-rows: 200px;
+      gap: 24px;
+   }
+      .footer-item {
+         height: 100%;
+   }
+}
+@media (max-width: 576px) {
+   /* ----------------- Footer */
+   .footer-item-2{
+      grid-column: span 2;
+      background-color: black;
+
+   }
+}
+  </style>
 </head>
 <body>
   
