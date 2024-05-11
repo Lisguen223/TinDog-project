@@ -323,10 +323,13 @@ body * {
 /* -------------------------------------------------------------- Footer */
 #footer {
    min-height: 200px;
-   padding: 48px 48px 96px 48px;
+   padding-top: 48px;
+   padding-bottom: 96px;
 }
    /* niveau 1 -------------------------------------- */
    .footer-grid-container {
+      box-sizing: border-box;
+      margin: 0 48px 0 48px;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: 100%;
